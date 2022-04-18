@@ -3,7 +3,7 @@ import morgan from 'morgan';
 
 const app: Application = express();
 
-import authRoutes from "./routes/auth";
+import authRoutes from "./routes/authRoutes";
 
 
 //configuraciones
@@ -14,7 +14,7 @@ app.set('port',3000);
 app.use(morgan('dev'));
 
 //rutas
-app.use(authRoutes);
+app.use('/api/auth',authRoutes);
 
 
 export default app;
