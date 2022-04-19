@@ -8,6 +8,7 @@ class AuthRoutes {
         this.config();
     }
     config() {
+        this.router.get('/listUser', auth_controller_1.authController.listUser);
         this.router.post('/createUser', auth_controller_1.authController.createUser);
         this.router.post('/signup', auth_controller_1.authController.signin);
         this.router.post('/signup', auth_controller_1.authController.profile);

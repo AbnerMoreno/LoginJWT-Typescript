@@ -15,6 +15,11 @@ class AuthController{
         }
       })
     }
+
+    async listUser(req:Request, res:Response){
+        const userList = await db.query('SELECT username,email,password FROM users');
+        res.json(userList.rows);
+    }
     
     signin = (req:Request, res:Response) => {
         res.send('singin');
