@@ -20,7 +20,7 @@ class AuthController {
                     res.json({ err });
                 }
                 else {
-                    res.json({ status: 1, message: "Servicio creado con exito" });
+                    res.json({ status: 1, message: "Usuario creado con exito" });
                 }
             });
         };
