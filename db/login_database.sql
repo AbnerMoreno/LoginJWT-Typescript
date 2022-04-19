@@ -1,1 +1,11 @@
 CREATE DATABASE loginJWT;
+
+CREATE TABLE users(
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50), 
+    email VARCHAR(50),
+    password VARCHAR(255),
+    token VARCHAR(500),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
