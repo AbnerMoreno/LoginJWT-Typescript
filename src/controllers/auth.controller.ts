@@ -6,8 +6,14 @@ import jwt from 'jsonwebtoken';
 class AuthController{
 
     createUser = (req:Request, res:Response) => {
-        console.log(req.body);
-        res.send('singup');
+      const {username, email, password} = req.body;
+      db.query('INSERT INTO users (username,email,password) VALUES ( $1, $2, $3)', [username,email,password], (err, resp) => {
+        if (err) {
+          res.json({err});
+        } else {
+          res.json({ status: 1, message: "Servicio creado con exito" });
+        }
+      })
     }
     
     signin = (req:Request, res:Response) => {
