@@ -5,7 +5,7 @@ exports.default = {
         host: 'localhost',
         user: 'postgres',
         password: '0000',
-        database: 'veni',
+        database: 'loginJWT',
         port: 5432,
     }
 };

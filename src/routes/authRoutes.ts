@@ -1,10 +1,20 @@
 import { Router } from 'express';
-import { profile, signin, signup } from "../controllers/auth.controller";
+import { authController} from "../controllers/auth.controller";
 
-const router: Router = Router();
+class AuthRoutes{
+    public router: Router = Router();
 
-router.post('/signup',signup)
-router.post('/signin',signin)
-router.get ('/profile',profile)
+    constructor(){
+        this.config();
+    }
 
-export default router;
+    config():void{
+        this.router.post('/signup',authController.createUser)
+        this.router.post('/signup',authController.signin)
+        this.router.post('/signup',authController.profile)
+    }
+
+}
+
+const authRoutes = new AuthRoutes();
+export default authRoutes.router

@@ -2,9 +2,17 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const auth_controller_1 = require("../controllers/auth.controller");
-const router = (0, express_1.Router)();
-router.post('/signup', auth_controller_1.signup);
-router.post('/signin', auth_controller_1.signin);
-router.get('/profile', auth_controller_1.profile);
-exports.default = router;
+class AuthRoutes {
+    constructor() {
+        this.router = (0, express_1.Router)();
+        this.config();
+    }
+    config() {
+        this.router.post('/signup', auth_controller_1.authController.createUser);
+        this.router.post('/signup', auth_controller_1.authController.signin);
+        this.router.post('/signup', auth_controller_1.authController.profile);
+    }
+}
+const authRoutes = new AuthRoutes();
+exports.default = authRoutes.router;
 //# sourceMappingURL=authRoutes.js.map
