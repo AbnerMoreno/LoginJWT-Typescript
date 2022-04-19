@@ -1,6 +1,9 @@
-import { Request, Response  } from "express";
+import { Request, Response  } from 'express';
+
+import jwt from 'jsonwebtoken';
 
 export const signup = (req:Request, res:Response) => {
+    console.log(req.body);
     res.send('singup');
 }
 

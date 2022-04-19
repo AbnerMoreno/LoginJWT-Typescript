@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.profile = exports.signin = exports.signup = void 0;
 const signup = (req, res) => {
+    console.log(req.body);
     res.send('singup');
 };
 exports.signup = signup;
