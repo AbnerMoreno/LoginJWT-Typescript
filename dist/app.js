@@ -9,6 +9,8 @@ const app = (0, express_1.default)();
 const authRoutes_1 = __importDefault(require("./routes/authRoutes"));
 //configuraciones
 app.set('port', 3000);
+app.use(express_1.default.urlencoded({ extended: true }));
+// app.use(bodyParser.json({ limit: "50mb" }));
 //middlewares
 app.use((0, morgan_1.default)('dev'));
 app.use(express_1.default.json());

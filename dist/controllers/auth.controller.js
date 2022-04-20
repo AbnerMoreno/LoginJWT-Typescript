@@ -37,6 +37,8 @@ class AuthController {
             res.json(userList.rows);
         });
     }
+    updateProfile(req, res) {
+    }
 }
 exports.authController = new AuthController();
 //# sourceMappingURL=auth.controller.js.map

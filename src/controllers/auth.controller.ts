@@ -20,10 +20,16 @@ class AuthController{
         const userList = await db.query('SELECT username,email,password FROM users');
         res.json(userList.rows);
     }
+
+    updateProfile(req:Request, res:Response){
+
+    }
     
     signin = (req:Request, res:Response) => {
         res.send('singin');
     }
+
+
     
     profile = (req:Request, res:Response) => {
         res.send('profile')
