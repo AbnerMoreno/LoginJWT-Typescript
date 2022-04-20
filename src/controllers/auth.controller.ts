@@ -1,7 +1,8 @@
 import { Request, Response  } from 'express';
 import { db } from "../database";
-
+import bc from "bcryptjs";
 import jwt from 'jsonwebtoken';
+import { promisify } from 'util';
 
 class AuthController{
 
