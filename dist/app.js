@@ -11,6 +11,8 @@ const authRoutes_1 = __importDefault(require("./routes/authRoutes"));
 app.set('port', 3000);
 app.use(express_1.default.urlencoded({ extended: true }));
 // app.use(bodyParser.json({ limit: "50mb" }));
+// dotenv.config({path: './'})
+// console.log(express)
 //middlewares
 app.use((0, morgan_1.default)('dev'));
 app.use(express_1.default.json());

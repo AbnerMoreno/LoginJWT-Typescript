@@ -8,11 +8,12 @@ const app: Application = express();
 
 import authRoutes from "./routes/authRoutes";
 
-
 //configuraciones
 app.set('port',3000);
 app.use(express.urlencoded({ extended: true }));
 // app.use(bodyParser.json({ limit: "50mb" }));
+// dotenv.config({path: './'})
+// console.log(express)
 
 //middlewares
 app.use(morgan('dev'));
