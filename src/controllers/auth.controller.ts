@@ -23,6 +23,9 @@ class AuthController{
 
     updateProfile(req:Request, res:Response){
 
+      const {username, email, password} = req.body;
+      db.query('UPDATE ')
+
     }
     
     signin = (req:Request, res:Response) => {

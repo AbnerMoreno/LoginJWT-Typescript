@@ -38,6 +38,8 @@ class AuthController {
         });
     }
     updateProfile(req, res) {
+        const { username, email, password } = req.body;
+        database_1.db.query('UPDATE ');
     }
 }
 exports.authController = new AuthController();
