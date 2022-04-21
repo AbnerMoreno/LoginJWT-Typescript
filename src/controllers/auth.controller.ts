@@ -22,12 +22,7 @@ class AuthController{
         res.json(userList.rows);
     }
 
-    updateProfile(req:Request, res:Response){
-
-      const {username, email, password} = req.body;
-      db.query('UPDATE ')
-
-    }
+    updateProfile(req:Request, res:Response){}
     
     signin = (req:Request, res:Response) => {
         res.send('singin');
